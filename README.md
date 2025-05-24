@@ -1,4 +1,4 @@
-# app-previsao-cancer-colorretal
+# Aplicação de predição de cancer colorretal
 
 Para rodar a aplicação:
 
