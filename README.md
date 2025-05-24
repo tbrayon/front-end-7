@@ -2,7 +2,7 @@
 
 Para rodar a aplicação:
 
-- python backend_script.py (rodar para gerar os arquivos modelo_coloretal.pkl e o preprocessor.pkl)
+- python backend_script.py (rodar uma única vez para gerar os arquivos .pkl)
 
 - python app.py (para rodar a aplicação)
 
