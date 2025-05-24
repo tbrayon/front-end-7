@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Previsão de Sobrevivência</title>
+<script>
+async function sendData() {
+    let data = {
+        Age: document.getElementById("age").value,
+        Gender: document.getElementById("gender").value,
+        Stage_at_Diagnosis: document.getElementById("stage").value
+    };
+
+    try {
+        let response = await fetch('http://127.0.0.1:5000/predict', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        console.log("Resposta do servidor:", response); // Depuração
+
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status}`);
+        }
+
+        let result = await response.json();
+        console.log("JSON recebido:", result); // Depuração no console
+
+        document.getElementById("output").innerHTML = "<h3>Resultados:</h3>";
+        for (let model in result) {
+            let prob = (result[model] * 100).toFixed(2);
+            document.getElementById("output").innerHTML += `<p>${model}: ${prob}%</p>`;
+        }
+
+    } catch (error) {
+        console.error("Erro ao enviar dados:", error);
+        document.getElementById("output").innerText = "Erro ao obter previsão. Verifique o servidor!";
+    }
+}
+</script>
+</head>
+<body>
+    <h2>Insira os Dados do Paciente</h2>
+    <label>Idade:</label>
+    <input type="number" id="age"><br><br>
+    <label>Gênero:</label>
+    <select id="gender">
+        <option value="Male">Masculino</option>
+        <option value="Female">Feminino</option>
+    </select><br><br>
+    <label>Estágio do Diagnóstico:</label>
+    <select id="stage">
+        <option value="I">I</option>
+        <option value="II">II</option>
+        <option value="III">III</option>
+        <option value="IV">IV</option>
+    </select><br><br>
+    <button onclick="sendData()">Prever Sobrevivência</button>
+    <p id="output"></p>
+</body>
+</html>
