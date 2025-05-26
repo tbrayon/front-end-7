@@ -9,10 +9,10 @@ app = Flask(__name__)
 CORS(app)  # Liberar CORS para requisições externas (frontend separado)
 
 # Carregar modelos e pré-processador
-rf_model = joblib.load("modelos/modelo_colorectal_rf.pkl")
-nb_model = joblib.load("modelos/modelo_colorectal_nb.pkl")
-xgb_model = joblib.load("modelos/modelo_colorectal_xgb.pkl")
-preprocessor = joblib.load("modelos/preprocessor.pkl")
+rf_model = joblib.load("modelo_colorectal_rf.pkl")
+nb_model = joblib.load("modelo_colorectal_nb.pkl")
+xgb_model = joblib.load("modelo_colorectal_xgb.pkl")
+preprocessor = joblib.load("preprocessor.pkl")
 
 # Rota principal (formulário)
 @app.route('/')

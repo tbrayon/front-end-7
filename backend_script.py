@@ -21,7 +21,7 @@ import joblib
 # ----------------------
 
 # Load and clean data
-df = pd.read_csv("C:\Users\mbray\Documents\College\7\app-previsao-cancer-colorretal\data\colorectal_cancer_prediction.csv")
+df = pd.read_csv("C:\\Users\\mbray\\Documents\\College\\7\\app-previsao-cancer-colorretal\\Doc\\colorectal_cancer_prediction.csv")
 df = df.drop(columns=['Patient_ID'])
 
 # Separate features and target
