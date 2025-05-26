@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Resultado da Previsão</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-4xl bg-white shadow-lg rounded-lg p-8">
+        <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">Resultado da Previsão</h1>
+        <div id="resultContent" class="space-y-4 text-gray-700 text-lg">
+            {% if resultados %}
+                {% for key, value in resultados.items() %}
+                    <p><strong>{{ key.replace('_', ' ') }}:</strong> {{ value }}</p>
+                {% endfor %}
+            {% else %}
+                <p class="text-red-500">Nenhum dado encontrado.</p>
+            {% endif %}
+        </div>
+        
+        <div class="text-center mt-8 space-x-4">
+            <button onclick="window.print()" 
+                class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
+                Imprimir Resultados
+            </button>
+
+        <div class="text-center mt-8">
+           <a href="/" class="text-indigo-600 hover:underline">Voltar ao Formulário</a>
+        </div>
+    </div>
+
+
+</body>
+</html>

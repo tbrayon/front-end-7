@@ -1,0 +1,333 @@
+<!-- Formulario por Completo -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Previsão Câncer Colorretal</title>
+    <!-- Importando Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-8">
+        <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Previsão de Câncer Colorretal</h1>
+
+        <form id="predictForm" class="space-y-5">
+            <div>
+                <label for="Age" class="block text-gray-700 font-semibold mb-1">Idade</label>
+                <input type="number" id="Age" name="Age" value="49" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+
+            <div>
+                <label for="Gender" class="block text-gray-700 font-semibold mb-1">Gênero</label>
+                <select id="Gender" name="Gender" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Female">Feminino</option>
+                    <option value="Male">Masculino</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Race" class="block text-gray-700 font-semibold mb-1">Raça</label>
+                <select id="Race" name="Race" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Asian">Asiática</option>
+                    <option value="White">Branca</option>
+                    <option value="Black">Negra</option>
+                    <option value="Other">Outra</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Region" class="block text-gray-700 font-semibold mb-1">Região</label>
+                <select id="Region" name="Region" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Africa">África</option>
+                    <option value="North America">América do Norte</option>
+                    <option value="South America">América do Sul</option>
+                    <option value="Asia">Ásia</option>
+                    <option value="Europe">Europa</option>
+                    <option value="Oceania">Oceania</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="Urban_or_Rural" class="block text-gray-700 font-semibold mb-1">Urbano ou Rural</label>
+                <select id="Urban_or_Rural" name="Urban_or_Rural" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Rural">Rural</option>
+                    <option value="Urban">Urbano</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Socioeconomic_Status" class="block text-gray-700 font-semibold mb-1">Status Socioeconômico</label>
+                <select id="Socioeconomic_Status" name="Socioeconomic_Status" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="High">Alto</option>
+                    <option value="Medium">Médio</option>
+                    <option value="Low">Baixo</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Family_History" class="block text-gray-700 font-semibold mb-1">Histórico Familiar</label>
+                <select id="Family_History" name="Family_History" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Yes">Sim</option>
+                    <option value="No" >Não</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Previous_Cancer_History" class="block text-gray-700 font-semibold mb-1">Histórico de Câncer Prévio</label>
+                <select id="Previous_Cancer_History" name="Previous_Cancer_History" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Yes">Sim</option>
+                    <option value="No" >Não</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Stage_at_Diagnosis" class="block text-gray-700 font-semibold mb-1">Estágio no Diagnóstico</label>
+                <select id="Stage_at_Diagnosis" name="Stage_at_Diagnosis" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="I">I</option>
+                    <option value="II" >II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Tumor_Aggressiveness" class="block text-gray-700 font-semibold mb-1">Agressividade do Tumor</label>
+                <select id="Tumor_Aggressiveness" name="Tumor_Aggressiveness" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Low">Baixa</option>
+                    <option value="Medium">Média</option>
+                    <option value="High">Alta</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Colonoscopy_Access" class="block text-gray-700 font-semibold mb-1">Acesso à Colonoscopia</label>
+                <select id="Colonoscopy_Access" name="Colonoscopy_Access" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="No">Não</option>
+                    <option value="Yes">Sim</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Screening_Regularity" class="block text-gray-700 font-semibold mb-1">Regularidade no Rastreamento</label>
+                <select id="Screening_Regularity" name="Screening_Regularity" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Regular">Regular</option>
+                    <option value="Irregular">Irregular</option>
+                    <option value="Never">Nunca</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Diet_Type" class="block text-gray-700 font-semibold mb-1">Tipo de Dieta</label>
+                <select id="Diet_Type" name="Diet_Type" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Balanced">Balanceada</option>
+                    <option value="Traditional">Tradicional</option>
+                    <option value="Western">Ocidental</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="BMI" class="block text-gray-700 font-semibold mb-1">Índice de Massa Corporal (IMC)</label>
+                <input type="number" step="0.1" id="BMI" name="BMI" value="30.5" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+            </div>
+
+
+            <div>
+                <label for="Physical_Activity_Level" class="block text-gray-700 font-semibold mb-1">Nível de Atividade Física</label>
+                <select id="Physical_Activity_Level" name="Physical_Activity_Level" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Low" >Baixo</option>
+                    <option value="Medium">Médio</option>
+                    <option value="High">Alto</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Smoking_Status" class="block text-gray-700 font-semibold mb-1">Status do Tabagismo</label>
+                <select id="Smoking_Status" name="Smoking_Status" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Never" >Nunca</option>
+                    <option value="Former">Ex-fumante</option>
+                    <option value="Current">Atualmente</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Alcohol_Consumption" class="block text-gray-700 font-semibold mb-1">Consumo de Álcool</label>
+                <select id="Alcohol_Consumption" name="Alcohol_Consumption" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Low" >Baixo</option>
+                    <option value="Medium">Médio</option>
+                    <option value="High">Alto</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Red_Meat_Consumption" class="block text-gray-700 font-semibold mb-1">Consumo de Carne Vermelha</label>
+                <select id="Red_Meat_Consumption" name="Red_Meat_Consumption" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                     <option value="Low" >Baixo</option>
+                     <option value="Medium">Médio</option>
+                     <option value="High">Alto</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Fiber_Consumption" class="block text-gray-700 font-semibold mb-1">Consumo de Fibras</label>
+                <select id="Fiber_Consumption" name="Fiber_Consumption" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Low" >Baixo</option>
+                    <option value="Medium">Médio</option>
+                    <option value="High">Alto</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Insurance_Coverage" class="block text-gray-700 font-semibold mb-1">Cobertura de Seguro</label>
+                <select id="Insurance_Coverage" name="Insurance_Coverage" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                   <option value="No">Não</option>
+                   <option value="Yes">Sim</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Time_to_Diagnosis" class="block text-gray-700 font-semibold mb-1">Tempo até Diagnóstico</label>
+                <select id="Time_to_Diagnosis" name="Time_to_Diagnosis" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Delayed">Atrasado</option>
+                    <option value="Timely">Em tempo</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Treatment_Access" class="block text-gray-700 font-semibold mb-1">Acesso ao Tratamento</label>
+                <select id="Treatment_Access" name="Treatment_Access" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Good">Bom</option>
+                    <option value="Limited">Limitado</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Chemotherapy_Received" class="block text-gray-700 font-semibold mb-1">Quimioterapia Recebida</label>
+                <select id="Chemotherapy_Received" name="Chemotherapy_Received" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Yes">Sim</option>
+                    <option value="No" >Não</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Radiotherapy_Received" class="block text-gray-700 font-semibold mb-1">Radioterapia Recebida</label>
+                <select id="Radiotherapy_Received" name="Radiotherapy_Received" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Yes">Sim</option>
+                    <option value="No" >Não</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Surgery_Received" class="block text-gray-700 font-semibold mb-1">Cirurgia Recebida</label>
+                <select id="Surgery_Received" name="Surgery_Received" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Yes">Sim</option>
+                    <option value="No" >Não</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Follow_Up_Adherence" class="block text-gray-700 font-semibold mb-1">Adesão ao Seguimento</label>
+                <select id="Follow_Up_Adherence" name="Follow_Up_Adherence" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Good">Boa</option>
+                    <option value="Poor">Ruim</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Recurrence" class="block text-gray-700 font-semibold mb-1">Recorrência</label>
+                <select id="Recurrence" name="Recurrence" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Yes" selected>Sim</option>
+                    <option value="No">Não</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="Time_to_Recurrence" class="block text-gray-700 font-semibold mb-1">Tempo até Recorrência</label>
+                <select id="Time_to_Recurrence" name="Time_to_Recurrence" required
+                    class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="Early">Precoce</option>
+                    <option value="Late">Tardia</option>
+                </select>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-indigo-600 text-white font-bold py-3 rounded-md hover:bg-indigo-700 transition-colors duration-200">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+
+<script>
+    document.getElementById('predictForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // impede o envio padrão do formulário
+
+        // Capturar os dados do formulário
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Transformar FormData em objeto JSON
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        try {
+            // Enviar dados para a API /predict
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro na requisição: ' + response.statusText);
+            }
+
+            const resultados = await response.json();
+
+            // Montar query string com os resultados para passar para a página resultados
+            const queryParams = new URLSearchParams(resultados).toString();
+
+            // Redirecionar para /resultados com os resultados na query string
+            window.location.href = '/resultados?' + queryParams;
+
+        } catch (error) {
+            console.error('Erro:', error);
+            alert('Ocorreu um erro ao processar a previsão. Tente novamente.');
+        }
+    });
+</script>
+    
+</body>
+</html>
